@@ -1,0 +1,49 @@
+package Project_001;
+
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		System.out.println("Hello there");
+		
+		
+		System.out.println("Welcome to the Task Tracker");
+        System.out.println("Choose an option:");
+        System.out.println("1. List all tasks.");
+        System.out.println("2. List all tasks are done.");
+        System.out.println("3. List all tasks are not done.");
+        System.out.println("4. List all tasks are in progress.");
+        
+		System.out.print("Your option: ");
+		Scanner scanner = new Scanner(System.in);
+		String option = scanner.nextLine();
+		
+		switch (option) {
+	        case 1:
+	            System.out.println("Hello");
+	            break;
+	
+	        case 2:
+	            System.out.print("Enter the first number: ");
+	            int num1 = scanner.nextInt();
+	            System.out.print("Enter the second number: ");
+	            int num2 = scanner.nextInt();
+	            System.out.println("The sum is: " + (num1 + num2));
+	            break;
+	
+	        case 3:
+	            System.out.println("Exiting...");
+	            break;
+	            
+	        case 4:
+	            System.out.println("Exiting...");
+	            break;
+	
+	        default:
+	            System.out.println("Invalid option!");
+	            break;
+	    }
+		scanner.close();
+	}
+
+}

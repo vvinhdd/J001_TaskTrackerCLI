@@ -1,0 +1,11 @@
+package Test;
+
+public class Testing {
+	
+	public static void main(String[] args) {
+		System.out.println("Hello there");
+		Scanner scanner = new Scanner(System.in);
+		
+	}
+
+}

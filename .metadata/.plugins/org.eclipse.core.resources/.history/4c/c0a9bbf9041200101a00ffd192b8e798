@@ -1,0 +1,23 @@
+package Project_001;
+
+public class Tasks {
+	
+	private String taskID;
+	private String taskDescription;
+	private String taskName;
+	private int taskState; // 0-in progress, 1-not done, 2-done
+	
+	
+	
+	public Tasks() {
+		
+	}
+	
+	public Tasks(String taskID, String taskName, int taskState) {
+		this.taskID = taskID;
+		this.taskName = taskName;
+		this.taskState = taskState;
+	}
+
+
+}

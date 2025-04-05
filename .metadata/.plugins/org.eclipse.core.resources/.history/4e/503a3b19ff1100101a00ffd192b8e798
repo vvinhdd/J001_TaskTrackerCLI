@@ -1,0 +1,9 @@
+package Project_001;
+
+public class Tasks {
+	
+	private String taskID;
+	private String taskName;
+	private int taskStates;
+
+}
