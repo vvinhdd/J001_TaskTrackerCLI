@@ -9,24 +9,10 @@ public class Main {
 	public static ArrayList<Tasks> T = new ArrayList<Tasks>();
 	
 	public static void AddTask() {
-		System.out.print("Add task: ");
+		System.out.print("Add task:");
         String task = scanner.nextLine();
         Tasks newTask = new Tasks("001",task,0);
         T.add(newTask);
-        System.out.println("----------");
-	}
-	
-	public static void SeeAllTask() {
-		System.out.println("----------");
-        System.out.println("Number of tasks: " + T.size());
-        System.out.println("----------");
-        if(!T.isEmpty()) {
-        	for(int i=0; i<T.size(); i++) {
-        		System.out.println("Task-"+ i + ": " + T.get(i).toString());
-        	}
-        }else {
-        	System.out.println("No task assgin.");
-        }
         System.out.println("----------");
 	}
 	
@@ -62,7 +48,14 @@ public class Main {
 		            break;
 		            
 		        case 4:
-		        	SeeAllTask();
+		        	System.out.println("----------");
+		            System.out.println("Number of tasks: " + T.size());
+		            if(!T.isEmpty()) {
+		            	for(int i=1; i<=T.size(); i++) {
+		            		System.out.println("Task-"+ i + ": " + T.get(i).toString());
+		            	}
+		            }
+		            System.out.println("----------");
 		            break;
 		            
 		        case 5:
@@ -82,4 +75,6 @@ public class Main {
 		scanner.close();
 	}
 	
+	
+
 }

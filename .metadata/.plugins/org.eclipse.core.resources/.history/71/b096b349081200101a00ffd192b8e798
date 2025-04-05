@@ -9,7 +9,7 @@ public class Main {
 	public static ArrayList<Tasks> T = new ArrayList<Tasks>();
 	
 	public static void AddTask() {
-		System.out.print("Add task: ");
+		System.out.print("Add task:");
         String task = scanner.nextLine();
         Tasks newTask = new Tasks("001",task,0);
         T.add(newTask);
@@ -21,7 +21,7 @@ public class Main {
         System.out.println("Number of tasks: " + T.size());
         System.out.println("----------");
         if(!T.isEmpty()) {
-        	for(int i=0; i<T.size(); i++) {
+        	for(int i=1; i<=T.size(); i++) {
         		System.out.println("Task-"+ i + ": " + T.get(i).toString());
         	}
         }else {
@@ -82,4 +82,6 @@ public class Main {
 		scanner.close();
 	}
 	
+	
+
 }

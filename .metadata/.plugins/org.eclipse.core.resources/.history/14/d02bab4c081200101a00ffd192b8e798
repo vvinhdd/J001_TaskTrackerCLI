@@ -9,7 +9,7 @@ public class Main {
 	public static ArrayList<Tasks> T = new ArrayList<Tasks>();
 	
 	public static void AddTask() {
-		System.out.print("Add task: ");
+		System.out.print("Add task:");
         String task = scanner.nextLine();
         Tasks newTask = new Tasks("001",task,0);
         T.add(newTask);
@@ -82,4 +82,6 @@ public class Main {
 		scanner.close();
 	}
 	
+	
+
 }
