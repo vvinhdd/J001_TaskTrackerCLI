@@ -1,8 +1,0 @@
-package Project_001;
-
-public class Tasks {
-	
-	private String taskName;
-	private int states;
-
-}

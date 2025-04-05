@@ -1,4 +1,0 @@
-INDEX VERSION 1.134+D:\001_Java Learning\Task Tracker CLI\.metadata\.plugins\org.eclipse.jdt.core
-3392066879.index
-1865797976.index
-1070017177.index
