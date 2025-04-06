@@ -18,6 +18,8 @@ public class Tasks {
 		this.taskID = taskID;
 		this.taskDescription = taskDescription;
 		this.taskStatus = taskStatus;
+		
+		
 	}
 
 	@Override
