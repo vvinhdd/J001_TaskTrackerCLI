@@ -51,7 +51,7 @@ public class TestDate {
 		// DateFormat
 		//DateFormat df = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 		//DateFormat df = new SimpleDateFormat();
-		DateFormat df = new SimpleDateFormat("dd/MM/yyyy hh:mm a");
+		DateFormat df = new SimpleDateFormat("MMM/dd/yyyy hh:mm a");
 		System.out.println(df.format(date));
 		
 		

@@ -1,11 +1,11 @@
 package J001;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Scanner;
-//import java.text.DateFormat;
-//import java.text.ParseException;
-//import java.text.SimpleDateFormat;
-//import java.util.Date;
+
 
 public class Main {
 	
@@ -13,76 +13,65 @@ public class Main {
 	public static ArrayList<Tasks> T = new ArrayList<Tasks>();
 	
 	public static void AddTask() {
+		//Input Task description
 		System.out.print("Add task: ");
         String task = scanner.nextLine();
-        Tasks newTask = new Tasks("001",task,0);
+        
+        Tasks newTask = new Tasks( T.size(), task, 0);
         T.add(newTask);
         System.out.println("----------");
 	}
 	
-	public static void SeeAllTask() {
-		System.out.println("----------");
-        System.out.println("Number of tasks: " + T.size());
-        System.out.println("----------");
-        if(!T.isEmpty()) {
-        	for(int i=0; i<T.size(); i++) {
-        		System.out.println("Task-"+ i + ": " + T.get(i).toString());
-        	}
-        }else {
-        	System.out.println("No task assgin.");
-        }
-        System.out.println("----------");
+	public static void DeleteTask(int deleteID) {
+		try {
+			T.remove(deleteID);
+		} catch(IndexOutOfBoundsException e) {
+			System.out.println("Can Delete Task: taskID do not exist.");
+		}
+		updateIDinArray();
 	}
 	
-	public static void main(String[] args) {
-		System.out.println("Hello there");
-		System.out.println("Welcome to the Task Tracker");
-		System.out.println("----------");
-		
-		int stop = 0;
-		
-		while (stop == 0) {
-			System.out.println("Choose an option:");
-	        System.out.println("1. Add task.		2. Update task.");
-	        System.out.println("3. Delete task.		4. See all task.");
-	        System.out.println("5. Exit Program.");
-	        System.out.println("----------");
-			System.out.print("Your option: ");
-			
-			int option = scanner.nextInt();
-			scanner.nextLine();
-				
-			switch (option) {
-		        case 1:
-		        	AddTask();
-		            break;
-		
-		        case 2:
-		            System.out.println("Update task.");
-		            break;
-		
-		        case 3:
-		            System.out.println("Delete task.");
-		            break;
-		            
-		        case 4:
-		        	SeeAllTask();
-		            break;
-		            
-		        case 5:
-		        	System.out.println("----------");
-		        	System.out.println("---Close Program---");
-		            stop = 1; //escape while
-		            break;
-		
-		        default:
-		            System.out.println("Invalid option!");
-		            break;
-		    }
-			//break;
+	public static void UpdateTask(int taskID, String taskDescription) {
+		try {
+			T.get(taskID).setTaskDescription(taskDescription);
+		} catch(IndexOutOfBoundsException e) {
+			System.out.println("Can Update Task: taskID do not exist");
 		}
-		System.out.println("---Goodbye sir---");
-		System.out.println("----------");
+	}
+	
+	public static void UpdateTaskStatus(int taskID, int taskStatus) {
+		try {
+			T.get(taskID).setTaskStatus(taskStatus);
+		} catch(IndexOutOfBoundsException e) {
+			System.out.println("Can Update Task: taskID do not exist");
+		}
+	}
+	
+	public static void updateIDinArray() { //Idea: Use Stack or Queue we can remove this part
+		for(int i=0; i<T.size(); i++) {
+			T.get(i).setTaskID(i);
+		}
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		AddTask();
+		AddTask();
+		AddTask();
+		AddTask();
+		for(int i=0; i<T.size();i++) {
+			System.out.println("Tasks: " + T.get(i).toString());
+		}
+		System.out.println("-------------");
+		DeleteTask(5);
+		UpdateTask(5, "Hello world");
+		//System.out.println("Delete in ID: 5");
+		System.out.println("-------------");
+		for(int i=0; i<T.size();i++) {
+			System.out.println("Tasks: " + T.get(i).toString());
+		}
+		
 		scanner.close();
 	}
 	

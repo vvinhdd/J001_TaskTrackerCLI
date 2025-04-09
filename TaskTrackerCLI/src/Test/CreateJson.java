@@ -14,7 +14,7 @@ public class CreateJson {
 		              "  \"name\": \"" + name + "\",\n" +
 		              "  \"age\": " + age + ",\n" +
 		              "  \"isStudent\": " + isStudent + "\n" +
-		              "}";
+		              "},";
 		
 		String name2 = "Alice2";
 		int age2 = 25;
@@ -25,7 +25,6 @@ public class CreateJson {
 	              "  \"age\": " + age2 + ",\n" +
 	              "  \"isStudent\": " + isStudent2 + "\n" +
 	              "}";
-		
 
 		try( FileWriter file = new FileWriter("output.json", true) ){// true = append mode
 			file.write(json+"\n");
