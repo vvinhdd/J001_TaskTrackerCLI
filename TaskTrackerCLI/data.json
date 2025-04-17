@@ -1,0 +1,23 @@
+[
+	{
+		"taskID": 1,
+		"taskDescription": "Mua Banh Mi",
+		"taskStatus": 0,
+		"createdAt": null,
+		"updateAt": null
+	},
+	{
+		"taskID": 2,
+		"taskDescription": "Mua Thit Heo, va Hot Vit",
+		"taskStatus": 0,
+		"createdAt": null,
+		"updateAt": null
+	},
+	{
+		"taskID": 3,
+		"taskDescription": "Mua Ca Thu {ca thu phai cat khuc nha}",
+		"taskStatus": 0,
+		"createdAt": null,
+		"updateAt": null
+	}
+]
